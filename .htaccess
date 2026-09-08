@@ -1,0 +1,10 @@
+# LiquorBox — Apache config for shared-hosting deploys
+ErrorDocument 404 /404.html
+
+# Cache static assets for a week
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/svg+xml "access plus 1 week"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+</IfModule>

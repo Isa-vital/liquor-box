@@ -1,0 +1,77 @@
+/* LiquorBox shared styles — extracted from index.html so all pages share one stylesheet */
+:root{
+  --onyx:#0E0E0F;
+  --charcoal:#1B1A18;
+  --parchment:#EDE6D8;
+  --brass:#A8823D;
+  --wine:#4A1620;
+}
+html{ scroll-behavior:smooth; }
+section[id]{ scroll-margin-top:100px; }
+body{ font-family:'Inter', sans-serif; background:var(--parchment); color:var(--onyx); }
+.font-display{ font-family:'Fraunces', serif; }
+.eyebrow{ font-size:12px; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; }
+
+.plate{ position:relative; overflow:hidden; background:var(--charcoal); display:flex; align-items:center; justify-content:center; }
+.plate svg{ width:44%; height:44%; }
+.plate .overlay{ position:absolute; inset:0; background:rgba(14,14,15,0.0); }
+.plate-img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+.plate .shade{ position:absolute; inset:0; background:linear-gradient(to top, rgba(14,14,15,0.85) 0%, rgba(14,14,15,0.15) 60%); }
+a.plate:hover .plate-img, .group:hover .plate-img{ transform:scale(1.05); }
+a.plate:hover{ outline:1px solid var(--brass); outline-offset:-1px; }
+
+.mono{
+  width:44px; height:44px; border:1px solid var(--brass); border-radius:9999px;
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Fraunces', serif; font-size:15px; color:var(--brass); flex-shrink:0;
+}
+.nav-link{ position:relative; }
+.nav-link::after{ content:''; position:absolute; left:0; bottom:-4px; width:0; height:1px; background:var(--brass); transition:width .2s ease; }
+.nav-link:hover::after{ width:100%; }
+.divider{ height:1px; background:rgba(14,14,15,0.12); }
+.divider-dark{ height:1px; background:rgba(237,230,216,0.12); }
+.icon-line{ fill:none; stroke:var(--brass); stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.skyline rect{ fill:var(--charcoal); }
+
+/* Buttons */
+.btn-primary{ background:var(--brass); color:var(--onyx); }
+.btn-dark{ background:var(--onyx); color:var(--parchment); }
+.add-btn{ transition:background .2s ease, color .2s ease; }
+.add-btn:hover{ background:var(--brass); color:var(--onyx) !important; }
+.qty-btn{
+  width:34px; height:34px; border:1px solid rgba(14,14,15,0.25);
+  display:flex; align-items:center; justify-content:center; font-size:16px;
+  transition:border-color .2s ease, color .2s ease;
+}
+.qty-btn:hover{ border-color:var(--brass); color:var(--brass); }
+
+/* Form fields */
+.field{
+  width:100%; background:rgba(255,255,255,0.55); border:1px solid rgba(14,14,15,0.18);
+  padding:12px 14px; font-size:14px; color:var(--onyx);
+}
+.field:focus{ outline:1px solid var(--brass); border-color:var(--brass); }
+.field::placeholder{ color:rgba(14,14,15,0.4); }
+
+/* FAQ accordion */
+details.faq{ border-bottom:1px solid rgba(14,14,15,0.12); }
+details.faq summary{ cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px; padding:20px 0; }
+details.faq summary::-webkit-details-marker{ display:none; }
+details.faq summary::after{ content:'+'; font-family:'Fraunces', serif; font-size:22px; color:var(--brass); flex-shrink:0; }
+details.faq[open] summary::after{ content:'−'; }
+details.faq p{ padding-bottom:20px; }
+
+/* Mobile responsiveness & deploy polish */
+*{ -webkit-tap-highlight-color:transparent; }
+html{ -webkit-text-size-adjust:100%; }
+img, svg, video{ max-width:100%; }
+body{ overflow-x:hidden; }
+@media (max-width:640px){
+  .field{ font-size:16px; }           /* 16px stops iOS auto-zoom on focus */
+  .qty-btn{ width:40px; height:40px; }/* comfortable touch target */
+  .eyebrow{ letter-spacing:0.12em; }
+  section[id]{ scroll-margin-top:80px; }
+}
+@media (hover:none){
+  .nav-link::after{ display:none; }   /* no hover underline on touch devices */
+}

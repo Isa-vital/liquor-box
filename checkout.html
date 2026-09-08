@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Liquor Box Store</title>
+<meta name="description" content="Complete your Liquor Box order — pay by MTN or Airtel Mobile Money, or cash on delivery.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0E0E0F">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="antialiased">
+
+<!-- Top strip -->
+<div class="text-center py-2 text-[11px] eyebrow" style="background:var(--onyx); color:var(--parchment); letter-spacing:0.14em;">
+  Verified 18+ Delivery &nbsp;·&nbsp; ID Checked on Arrival &nbsp;·&nbsp; Kampala &amp; Wakiso
+</div>
+
+<!-- Header -->
+<header class="sticky top-0 z-40" style="background:var(--parchment); border-bottom:1px solid rgba(14,14,15,0.1);">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-5">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="mono">LB</div>
+      <div>
+        <div class="font-display text-xl leading-none">Liquor Box</div>
+        <div class="eyebrow" style="color:var(--brass); letter-spacing:0.12em;">Store — Kampala</div>
+      </div>
+    </a>
+    <nav class="hidden md:flex gap-9 text-sm">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="shop.html" class="nav-link">Shop</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="flex items-center gap-5">
+      <a href="https://wa.me/256700000000?text=Hi%20Liquor%20Box%2C%20I%27d%20like%20to%20place%20an%20order" target="_blank" rel="noopener" class="hidden sm:block text-sm px-5 py-2.5 btn-dark">Order on WhatsApp</a>
+      <a href="cart.html" class="relative" aria-label="Cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--onyx)" stroke-width="1.6"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6L4 3H2"/></svg>
+        <span id="cart-count" class="absolute -top-2 -right-2 text-[9px] w-4 h-4 rounded-full flex items-center justify-center" style="background:var(--wine); color:var(--parchment);">0</span>
+      </a>
+      <button id="menu-btn" class="md:hidden" aria-label="Menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--onyx)" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-5 space-y-3 text-sm" style="border-top:1px solid rgba(14,14,15,0.1);">
+    <a href="index.html" class="block pt-4">Home</a>
+    <a href="shop.html" class="block">Shop</a>
+    <a href="about.html" class="block">About</a>
+    <a href="faq.html" class="block">FAQ</a>
+    <a href="contact.html" class="block">Contact</a>
+    <a href="cart.html" class="block">Cart</a>
+    <a href="https://wa.me/256700000000?text=Hi%20Liquor%20Box%2C%20I%27d%20like%20to%20place%20an%20order" target="_blank" rel="noopener" class="block font-semibold" style="color:var(--brass);">Order on WhatsApp →</a>
+  </div>
+</header>
+
+<!-- Checkout -->
+<section class="max-w-6xl mx-auto px-6 py-16" style="min-height:55vh;">
+  <div class="eyebrow mb-3" style="color:var(--brass);">Almost There</div>
+  <h1 class="font-display text-4xl mb-10">Checkout</h1>
+
+  <div id="checkout-empty" class="hidden text-center py-16">
+    <p class="opacity-60 mb-8">Your cart is empty — add a few bottles first.</p>
+    <a href="shop.html" class="text-sm px-8 py-3.5 btn-primary">Browse the Shop</a>
+  </div>
+
+  <div id="checkout-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+    <!-- Delivery details form -->
+    <form id="checkout-form" class="space-y-5" novalidate>
+      <div>
+        <label for="f-name" class="eyebrow block mb-2 opacity-60">Full Name *</label>
+        <input id="f-name" class="field" type="text" placeholder="e.g. Isaac M." required>
+      </div>
+      <div>
+        <label for="f-phone" class="eyebrow block mb-2 opacity-60">Phone Number *</label>
+        <input id="f-phone" class="field" type="tel" placeholder="e.g. 0700 000 000" required>
+      </div>
+      <div>
+        <label for="f-zone" class="eyebrow block mb-2 opacity-60">Delivery Zone *</label>
+        <select id="f-zone" class="field" required>
+          <option value="">Select your zone…</option>
+          <option>Zone A — Kampala Central (Nakasero, Kololo, Old Kampala)</option>
+          <option>Zone B — Inner Suburbs (Ntinda, Bugolobi, Muyenga, Naalya)</option>
+          <option>Zone C — Wakiso &amp; Beyond (Entebbe Rd, Kira, Bweyogerere)</option>
+        </select>
+      </div>
+      <div>
+        <label for="f-address" class="eyebrow block mb-2 opacity-60">Delivery Address *</label>
+        <textarea id="f-address" class="field" rows="3" placeholder="Street, building, landmark…" required></textarea>
+      </div>
+      <div>
+        <label for="f-payment" class="eyebrow block mb-2 opacity-60">Payment Method *</label>
+        <select id="f-payment" class="field" required>
+          <option value="">Select payment…</option>
+          <option>MTN Mobile Money</option>
+          <option>Airtel Money</option>
+          <option>Cash on Delivery</option>
+        </select>
+      </div>
+      <div>
+        <label for="f-note" class="eyebrow block mb-2 opacity-60">Note (optional)</label>
+        <textarea id="f-note" class="field" rows="2" placeholder="Anything we should know?"></textarea>
+      </div>
+      <p id="form-error" class="hidden text-sm" style="color:var(--wine);">Please fill in all required fields.</p>
+      <button type="submit" class="w-full text-sm px-8 py-4 btn-primary">Place Order via WhatsApp →</button>
+      <p class="text-xs opacity-50">Submitting opens WhatsApp with your order pre-filled — send the message to confirm. Our rider verifies ID (18+) on arrival.</p>
+    </form>
+
+    <!-- Order summary -->
+    <div class="p-8" style="background:var(--charcoal); color:var(--parchment);">
+      <div class="eyebrow mb-5" style="color:var(--brass);">Order Summary</div>
+      <div id="summary-items" class="space-y-4 mb-6"></div>
+      <div class="divider-dark mb-6"></div>
+      <div class="flex justify-between text-sm mb-3"><span class="opacity-70">Subtotal</span><span id="summary-subtotal"></span></div>
+      <div class="flex justify-between text-sm mb-6"><span class="opacity-70">Delivery</span><span class="opacity-70">Confirmed on WhatsApp</span></div>
+      <div class="flex justify-between font-display text-xl"><span>Total</span><span id="summary-total"></span></div>
+      <a href="cart.html" class="inline-block mt-8 text-sm opacity-70 hover:opacity-100">← Edit cart</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer style="background:var(--onyx); color:var(--parchment);">
+  <div class="max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm">
+    <div>
+      <div class="flex items-center gap-3 mb-3">
+        <div class="mono">LB</div>
+        <div class="font-display text-lg">Liquor Box Store</div>
+      </div>
+      <p class="opacity-50">Kampala's curated liquor delivery.</p>
+    </div>
+    <div>
+      <div class="eyebrow mb-4 opacity-50">Shop</div>
+      <div class="opacity-80 space-y-2">
+        <a href="shop.html?cat=whiskey" class="block hover:opacity-100">Whiskey &amp; Bourbon</a>
+        <a href="shop.html?cat=wine" class="block hover:opacity-100">Wine</a>
+        <a href="shop.html?cat=beer" class="block hover:opacity-100">Beer &amp; Cider</a>
+        <a href="shop.html?cat=spirits" class="block hover:opacity-100">Spirits</a>
+        <a href="shop.html?cat=party" class="block hover:opacity-100">Party Boxes</a>
+      </div>
+    </div>
+    <div>
+      <div class="eyebrow mb-4 opacity-50">Info</div>
+      <div class="opacity-80 space-y-2">
+        <a href="index.html#zones" class="block hover:opacity-100">Delivery Zones</a>
+        <a href="age-policy.html" class="block hover:opacity-100">Age Verification Policy</a>
+        <a href="terms.html" class="block hover:opacity-100">Terms of Sale</a>
+        <a href="faq.html" class="block hover:opacity-100">FAQ</a>
+      </div>
+    </div>
+    <div>
+      <div class="eyebrow mb-4 opacity-50">Contact</div>
+      <div class="opacity-80 space-y-2">
+        <a href="https://wa.me/256700000000" target="_blank" rel="noopener" class="block hover:opacity-100">WhatsApp: +256 7XX XXX XXX</a>
+        <a href="contact.html" class="block hover:opacity-100">Contact Us</a>
+        <div>Kampala, Uganda</div>
+      </div>
+    </div>
+  </div>
+  <div class="divider-dark"></div>
+  <div class="text-center text-xs opacity-40 py-5">
+    Drink responsibly. Liquor Box Store sells only to verified adults 18+.
+  </div>
+</footer>
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+(function(){
+  var items = Cart.items();
+  var grid = document.getElementById('checkout-grid');
+  var emptyMsg = document.getElementById('checkout-empty');
+
+  if (!items.length) {
+    grid.classList.add('hidden');
+    emptyMsg.classList.remove('hidden');
+    return;
+  }
+
+  document.getElementById('summary-items').innerHTML = items.map(function(i){
+    return '<div class="flex justify-between text-sm gap-4">' +
+      '<span class="opacity-80">' + i.qty + ' × ' + i.product.name + ' (' + i.product.size + ')</span>' +
+      '<span class="flex-shrink-0">' + fmtUGX(i.product.price * i.qty) + '</span>' +
+    '</div>';
+  }).join('');
+  document.getElementById('summary-subtotal').textContent = fmtUGX(Cart.subtotal());
+  document.getElementById('summary-total').textContent = fmtUGX(Cart.subtotal());
+
+  document.getElementById('checkout-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('f-name').value.trim();
+    var phone = document.getElementById('f-phone').value.trim();
+    var zone = document.getElementById('f-zone').value;
+    var address = document.getElementById('f-address').value.trim();
+    var payment = document.getElementById('f-payment').value;
+    var note = document.getElementById('f-note').value.trim();
+    var error = document.getElementById('form-error');
+
+    if (!name || !phone || !zone || !address || !payment) {
+      error.classList.remove('hidden');
+      return;
+    }
+    error.classList.add('hidden');
+
+    var lines = [
+      'NEW ORDER — Liquor Box',
+      '',
+      'Name: ' + name,
+      'Phone: ' + phone,
+      'Zone: ' + zone,
+      'Address: ' + address,
+      'Payment: ' + payment,
+      '',
+      'Items:'
+    ];
+    Cart.items().forEach(function(i){
+      lines.push('- ' + i.qty + ' × ' + i.product.name + ' (' + i.product.size + ') — ' + fmtUGX(i.product.price * i.qty));
+    });
+    lines.push('', 'Subtotal: ' + fmtUGX(Cart.subtotal()));
+    if (note) lines.push('Note: ' + note);
+
+    window.open(waLink(lines.join('\n')), '_blank');
+  });
+})();
+</script>
+
+</body>
+</html>
