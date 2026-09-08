@@ -1,166 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — Liquor Box Store</title>
-<meta name="description" content="The story of Liquor Box Store — Kampala's curated liquor delivery.">
-<meta name="theme-color" content="#0E0E0F">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About — Liquor Box Store">
-<meta property="og:description" content="The story of Liquor Box Store — Kampala's curated liquor delivery.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200&q=80">
-<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-<link rel="preconnect" href="https://images.unsplash.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Liquor Box 256</title>
+  <meta name="description" content="The story of Liquor Box 256 — Kampala's curated liquor delivery.">
+  <meta name="theme-color" content="#0E0E0F">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About — Liquor Box 256">
+  <meta property="og:description" content="The story of Liquor Box 256 — Kampala's curated liquor delivery.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200&q=80">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="antialiased">
 
-<!-- Top strip -->
-<div class="text-center py-2 text-[11px] eyebrow" style="background:var(--onyx); color:var(--parchment); letter-spacing:0.14em;">
-  Verified 18+ Delivery &nbsp;·&nbsp; ID Checked on Arrival &nbsp;·&nbsp; Kampala &amp; Wakiso
-</div>
+  <!-- CHANGED: top strip removed per request
+  <div class="text-center py-2 text-[11px] eyebrow"
+    style="background:var(--onyx); color:var(--parchment); letter-spacing:0.14em;">
+    Verified 18+ Delivery &nbsp;·&nbsp; ID Checked on Arrival &nbsp;·&nbsp; Kampala &amp; Wakiso
+  </div>
+  -->
 
-<!-- Header -->
-<header class="sticky top-0 z-40" style="background:var(--parchment); border-bottom:1px solid rgba(14,14,15,0.1);">
-  <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-5">
-    <a href="index.html" class="flex items-center gap-3">
-      <div class="mono">LB</div>
-      <div>
-        <div class="font-display text-xl leading-none">Liquor Box</div>
-        <div class="eyebrow" style="color:var(--brass); letter-spacing:0.12em;">Store — Kampala</div>
-      </div>
-    </a>
-    <nav class="hidden md:flex gap-9 text-sm">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="shop.html" class="nav-link">Shop</a>
-      <a href="about.html" class="nav-link" style="color:var(--brass);">About</a>
-      <a href="faq.html" class="nav-link">FAQ</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </nav>
-    <div class="flex items-center gap-5">
-      <a href="https://wa.me/256700000000?text=Hi%20Liquor%20Box%2C%20I%27d%20like%20to%20place%20an%20order" target="_blank" rel="noopener" class="hidden sm:block text-sm px-5 py-2.5 btn-dark">Order on WhatsApp</a>
-      <a href="cart.html" class="relative" aria-label="Cart">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--onyx)" stroke-width="1.6"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6L4 3H2"/></svg>
-        <span id="cart-count" class="absolute -top-2 -right-2 text-[9px] w-4 h-4 rounded-full flex items-center justify-center" style="background:var(--wine); color:var(--parchment);">0</span>
+  <!-- Header -->
+  <header class="sticky top-0 z-40" style="background:var(--parchment); border-bottom:1px solid rgba(14,14,15,0.1);">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-5">
+      <!-- CHANGED: text brand replaced with logo image -->
+      <a href="index.html" class="flex items-center">
+        <img src="assets/img/logo.jpg" alt="Liquor Box 256" class="h-14 w-auto mix-blend-multiply">
       </a>
-      <button id="menu-btn" class="md:hidden" aria-label="Menu" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--onyx)" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
+      <nav class="hidden md:flex gap-9 text-sm">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="about.html" class="nav-link" style="color:var(--brass);">About</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="flex items-center gap-5">
+        <a href="https://wa.me/256700000000?text=Hi%20Liquor%20Box%20256%2C%20I%27d%20like%20to%20place%20an%20order"
+          target="_blank" rel="noopener" class="hidden sm:block text-sm px-5 py-2.5 btn-dark">Order on WhatsApp</a>
+        <a href="cart.html" class="relative" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--onyx)" stroke-width="1.6">
+            <path d="M6 6h15l-1.5 9h-12z" />
+            <circle cx="9" cy="20" r="1" />
+            <circle cx="18" cy="20" r="1" />
+            <path d="M6 6L4 3H2" />
+          </svg>
+          <span id="cart-count"
+            class="absolute -top-2 -right-2 text-[9px] w-4 h-4 rounded-full flex items-center justify-center"
+            style="background:var(--wine); color:var(--parchment);">0</span>
+        </a>
+        <button id="menu-btn" class="md:hidden" aria-label="Menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--onyx)" stroke-width="1.6">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
     </div>
-  </div>
-  <div id="mobile-menu" class="hidden md:hidden px-6 pb-5 space-y-3 text-sm" style="border-top:1px solid rgba(14,14,15,0.1);">
-    <a href="index.html" class="block pt-4">Home</a>
-    <a href="shop.html" class="block">Shop</a>
-    <a href="about.html" class="block" style="color:var(--brass);">About</a>
-    <a href="faq.html" class="block">FAQ</a>
-    <a href="contact.html" class="block">Contact</a>
-    <a href="cart.html" class="block">Cart</a>
-    <a href="https://wa.me/256700000000?text=Hi%20Liquor%20Box%2C%20I%27d%20like%20to%20place%20an%20order" target="_blank" rel="noopener" class="block font-semibold" style="color:var(--brass);">Order on WhatsApp →</a>
-  </div>
-</header>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-5 space-y-3 text-sm"
+      style="border-top:1px solid rgba(14,14,15,0.1);">
+      <a href="index.html" class="block pt-4">Home</a>
+      <a href="shop.html" class="block">Shop</a>
+      <a href="about.html" class="block" style="color:var(--brass);">About</a>
+      <a href="faq.html" class="block">FAQ</a>
+      <a href="contact.html" class="block">Contact</a>
+      <a href="cart.html" class="block">Cart</a>
+      <a href="https://wa.me/256700000000?text=Hi%20Liquor%20Box%20256%2C%20I%27d%20like%20to%20place%20an%20order"
+        target="_blank" rel="noopener" class="block font-semibold" style="color:var(--brass);">Order on WhatsApp →</a>
+    </div>
+  </header>
 
-<!-- Story -->
-<section class="max-w-6xl mx-auto px-6 py-20">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-    <div>
-      <div class="eyebrow mb-3" style="color:var(--brass);">Our Story</div>
-      <h1 class="font-display text-4xl md:text-5xl mb-8 leading-[1.1]">A cellar built for Kampala's evenings.</h1>
-      <div class="space-y-5 text-sm opacity-70 max-w-md">
-        <p>Liquor Box started with a simple frustration: finding a good bottle in Kampala after dark meant either settling for what the nearest kiosk had, or crossing town in traffic and hoping the shop was still open.</p>
-        <p>So we built the shop we wished existed — a curated cellar of whiskey, wine, beer and spirits, checked for provenance, priced honestly, and delivered to your door in under an hour across Kampala and Wakiso.</p>
-        <p>Order on the site or send us a message on WhatsApp. Pay by Mobile Money or cash. Our rider checks ID at the door, every time — no exceptions.</p>
+  <!-- Story -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="eyebrow mb-3" style="color:var(--brass);">Our Story</div>
+        <h1 class="font-display text-4xl md:text-5xl mb-8 leading-[1.1]">A cellar built for Kampala's evenings.</h1>
+        <div class="space-y-5 text-sm opacity-70 max-w-md">
+          <p>Liquor Box 256 started with a simple frustration: finding a good bottle in Kampala after dark meant either
+            settling for what the nearest kiosk had, or crossing town in traffic and hoping the shop was still open.</p>
+          <p>So we built the shop we wished existed — a curated cellar of whiskey, wine, beer and spirits, checked for
+            provenance, priced honestly, and delivered to your door in under an hour across Kampala and Wakiso.</p>
+          <p>Order on the site or send us a message on WhatsApp. Pay by Mobile Money or cash. Our rider checks ID at the
+            door, every time — no exceptions.</p>
+        </div>
+      </div>
+      <div class="plate aspect-[4/5]">
+        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80"
+          alt="Back-lit bar shelf lined with liquor bottles" class="plate-img" loading="lazy">
       </div>
     </div>
-    <div class="plate aspect-[4/5]">
-      <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80" alt="Back-lit bar shelf lined with liquor bottles" class="plate-img" loading="lazy">
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Values -->
-<section style="background:var(--onyx); color:var(--parchment);">
-  <div class="max-w-6xl mx-auto px-6 py-20">
-    <div class="eyebrow mb-3" style="color:var(--brass);">What We Stand By</div>
-    <h2 class="font-display text-3xl mb-14">Three promises</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-white/10">
-      <div class="pb-8 md:pb-0 md:pr-10">
-        <div class="mono mb-4">01</div>
-        <div class="font-display text-xl mb-2">Genuine bottles only</div>
-        <p class="text-sm opacity-60">Every bottle is sourced from licensed distributors and checked for provenance before it reaches the shelf.</p>
-      </div>
-      <div class="py-8 md:py-0 md:px-10">
-        <div class="mono mb-4">02</div>
-        <div class="font-display text-xl mb-2">Honest prices</div>
-        <p class="text-sm opacity-60">What you see is what you pay. Delivery fees are quoted upfront by zone — no surprises at the door.</p>
-      </div>
-      <div class="pt-8 md:pt-0 md:pl-10">
-        <div class="mono mb-4">03</div>
-        <div class="font-display text-xl mb-2">Responsible always</div>
-        <p class="text-sm opacity-60">We sell to verified adults 18+ only. Our riders check ID on every delivery, and we never deliver to anyone visibly intoxicated.</p>
+  <!-- Values -->
+  <section style="background:var(--onyx); color:var(--parchment);">
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <div class="eyebrow mb-3" style="color:var(--brass);">What We Stand By</div>
+      <h2 class="font-display text-3xl mb-14">Three promises</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-white/10">
+        <div class="pb-8 md:pb-0 md:pr-10">
+          <div class="mono mb-4">01</div>
+          <div class="font-display text-xl mb-2">Genuine bottles only</div>
+          <p class="text-sm opacity-60">Every bottle is sourced from licensed distributors and checked for provenance
+            before it reaches the shelf.</p>
+        </div>
+        <div class="py-8 md:py-0 md:px-10">
+          <div class="mono mb-4">02</div>
+          <div class="font-display text-xl mb-2">Honest prices</div>
+          <p class="text-sm opacity-60">What you see is what you pay. Delivery fees are quoted upfront by zone — no
+            surprises at the door.</p>
+        </div>
+        <div class="pt-8 md:pt-0 md:pl-10">
+          <div class="mono mb-4">03</div>
+          <div class="font-display text-xl mb-2">Responsible always</div>
+          <p class="text-sm opacity-60">We sell to verified adults 18+ only. Our riders check ID on every delivery, and
+            we never deliver to anyone visibly intoxicated.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CTA -->
-<section class="max-w-6xl mx-auto px-6 py-20 text-center">
-  <h2 class="font-display text-3xl mb-8">Ready to browse the cellar?</h2>
-  <div class="flex flex-wrap gap-4 justify-center">
-    <a href="shop.html" class="text-sm px-8 py-3.5 btn-primary">Shop the Collection</a>
-    <a href="https://wa.me/256700000000?text=Hi%20Liquor%20Box%2C%20I%27d%20like%20to%20place%20an%20order" target="_blank" rel="noopener" class="text-sm px-8 py-3.5 border" style="border-color:var(--onyx);">Chat on WhatsApp</a>
-  </div>
-</section>
+  <!-- CTA -->
+  <section class="max-w-6xl mx-auto px-6 py-20 text-center">
+    <h2 class="font-display text-3xl mb-8">Ready to browse the cellar?</h2>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="shop.html" class="text-sm px-8 py-3.5 btn-primary">Shop the Collection</a>
+      <a href="https://wa.me/256700000000?text=Hi%20Liquor%20Box%20256%2C%20I%27d%20like%20to%20place%20an%20order"
+        target="_blank" rel="noopener" class="text-sm px-8 py-3.5 border" style="border-color:var(--onyx);">Chat on
+        WhatsApp</a>
+    </div>
+  </section>
 
-<!-- Footer -->
-<footer style="background:var(--onyx); color:var(--parchment);">
-  <div class="max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm">
-    <div>
-      <div class="flex items-center gap-3 mb-3">
-        <div class="mono">LB</div>
-        <div class="font-display text-lg">Liquor Box Store</div>
+  <!-- Footer -->
+  <footer style="background:var(--onyx); color:var(--parchment);">
+    <div class="max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm">
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="mono">LB</div>
+          <div class="font-display text-lg">Liquor Box 256</div>
+        </div>
+        <p class="opacity-50">Kampala's curated liquor delivery.</p>
       </div>
-      <p class="opacity-50">Kampala's curated liquor delivery.</p>
-    </div>
-    <div>
-      <div class="eyebrow mb-4 opacity-50">Shop</div>
-      <div class="opacity-80 space-y-2">
-        <a href="shop.html?cat=whiskey" class="block hover:opacity-100">Whiskey &amp; Bourbon</a>
-        <a href="shop.html?cat=wine" class="block hover:opacity-100">Wine</a>
-        <a href="shop.html?cat=beer" class="block hover:opacity-100">Beer &amp; Cider</a>
-        <a href="shop.html?cat=spirits" class="block hover:opacity-100">Spirits</a>
-        <a href="shop.html?cat=party" class="block hover:opacity-100">Party Boxes</a>
+      <div>
+        <div class="eyebrow mb-4 opacity-50">Shop</div>
+        <div class="opacity-80 space-y-2">
+          <a href="shop.html?cat=whiskey" class="block hover:opacity-100">Whiskey &amp; Bourbon</a>
+          <a href="shop.html?cat=wine" class="block hover:opacity-100">Wine</a>
+          <a href="shop.html?cat=beer" class="block hover:opacity-100">Beer &amp; Cider</a>
+          <a href="shop.html?cat=spirits" class="block hover:opacity-100">Spirits</a>
+          <a href="shop.html?cat=party" class="block hover:opacity-100">Party Boxes</a>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow mb-4 opacity-50">Info</div>
+        <div class="opacity-80 space-y-2">
+          <a href="index.html#zones" class="block hover:opacity-100">Delivery Zones</a>
+          <a href="age-policy.html" class="block hover:opacity-100">Age Verification Policy</a>
+          <a href="terms.html" class="block hover:opacity-100">Terms of Sale</a>
+          <a href="faq.html" class="block hover:opacity-100">FAQ</a>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow mb-4 opacity-50">Contact</div>
+        <div class="opacity-80 space-y-2">
+          <a href="https://wa.me/256700000000" target="_blank" rel="noopener" class="block hover:opacity-100">WhatsApp:
+            +256 7XX XXX XXX</a>
+          <a href="contact.html" class="block hover:opacity-100">Contact Us</a>
+          <div>Kampala, Uganda</div>
+        </div>
       </div>
     </div>
-    <div>
-      <div class="eyebrow mb-4 opacity-50">Info</div>
-      <div class="opacity-80 space-y-2">
-        <a href="index.html#zones" class="block hover:opacity-100">Delivery Zones</a>
-        <a href="age-policy.html" class="block hover:opacity-100">Age Verification Policy</a>
-        <a href="terms.html" class="block hover:opacity-100">Terms of Sale</a>
-        <a href="faq.html" class="block hover:opacity-100">FAQ</a>
-      </div>
+    <div class="divider-dark"></div>
+    <div class="text-center text-xs opacity-40 py-5">
+      Drink responsibly. Liquor Box 256 sells only to verified adults 18+.
     </div>
-    <div>
-      <div class="eyebrow mb-4 opacity-50">Contact</div>
-      <div class="opacity-80 space-y-2">
-        <a href="https://wa.me/256700000000" target="_blank" rel="noopener" class="block hover:opacity-100">WhatsApp: +256 7XX XXX XXX</a>
-        <a href="contact.html" class="block hover:opacity-100">Contact Us</a>
-        <div>Kampala, Uganda</div>
-      </div>
-    </div>
-  </div>
-  <div class="divider-dark"></div>
-  <div class="text-center text-xs opacity-40 py-5">
-    Drink responsibly. Liquor Box Store sells only to verified adults 18+.
-  </div>
-</footer>
+  </footer>
 
-<script src="assets/js/products.js"></script>
-<script src="assets/js/main.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
