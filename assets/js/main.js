@@ -1,5 +1,5 @@
 /* LiquorBox shared logic: localStorage cart, age gate, mobile nav, add-to-cart, WhatsApp helpers */
-var WA_NUMBER = "256700000000"; // TODO: replace with the store's real WhatsApp number
+var WA_NUMBER = "256783972063";
 
 function waLink(text) {
   return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text);
